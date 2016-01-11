@@ -6,3 +6,24 @@
     <div class="supplies-list-item__amount">{{ item.amount }}</div>
   </li>
 </ul>
+
+<form class="add-supplies-form" name="addItemForm" ng-submit="supplies.add()">
+  <div class="add-supplies-form__name">
+    <input type="text"
+           placeholder="the item you have bought"
+           class=""
+           required=""
+           ng-model="supplies.new.item">
+  </div>
+  <div class="add-supplies-form__amount">
+    <input type="number"
+           min="0"
+           placeholder="its amount"
+           class="add-supplies-form__amount"
+           required=""
+           ng-model="supplies.new.amount">
+  </div>
+  <div class="add-supplies-form__submit">
+    <button type="submit"> Add</button>
+  </div>
+</form>

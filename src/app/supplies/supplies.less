@@ -12,3 +12,32 @@
     }
   }
 }
+
+.add-supplies-form {
+
+  .make-row();
+
+  input {
+    .form-control();
+  }
+
+  &__name {
+    .make-xs-column(10);
+    .make-md-column(8);
+  }
+
+  &__amount {
+    .make-xs-column(2);
+    .make-md-column(2);
+  }
+
+  &__submit {
+    .make-md-column(2);
+
+    button {
+      width: 100%;
+      .btn();
+      .btn-primary();
+    }
+  }
+}
