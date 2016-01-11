@@ -9,9 +9,4 @@ angular.module('barbershop.supplies')
       delete vm.new;
     };
 
-    vm.decrease = function (item) {
-      if (item.amount) {
-        suppliesService.take(item.item, 1);
-      }
-    }
   });

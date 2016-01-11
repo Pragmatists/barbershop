@@ -40,22 +40,4 @@ describe('SuppliesController', function () {
     expect(ctrl.new).toBeUndefined();
   });
 
-  it('decreases amounts', function () {
-    spyOn(suppliesService, 'take');
-    var ctrl = init();
-
-    ctrl.decrease({item: 'shampoo', amount: 1});
-
-    expect(suppliesService.take).toHaveBeenCalledWith('shampoo', 1);
-  });
-
-  it('does not decrease when empty', function () {
-    spyOn(suppliesService, 'take');
-    var ctrl = init();
-
-    ctrl.decrease({item: 'shampoo', amount: 0});
-
-    expect(suppliesService.take).not.toHaveBeenCalled();
-  });
-
 });

@@ -4,7 +4,7 @@
   <li class="supplies-list-item" ng-repeat="item in supplies.list">
     <div class="supplies-list-item__name">{{ item.item }}</div>
     <div class="supplies-list-item__amount">{{ item.amount }}</div>
-    <bas-decrease class="supplies-list-item__decrease"></bas-decrease>
+    <bas-decrease item="item" class="supplies-list-item__decrease"></bas-decrease>
   </li>
 </ul>
 
