@@ -1,1 +1,8 @@
 <h1>supplies</h1>
+
+<ul class="supplies-list">
+  <li class="supplies-list-item" ng-repeat="item in supplies.list">
+    <div class="supplies-list-item__name">{{ item.item }}</div>
+    <div class="supplies-list-item__amount">{{ item.amount }}</div>
+  </li>
+</ul>
