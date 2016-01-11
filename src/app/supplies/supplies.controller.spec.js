@@ -20,4 +20,24 @@ describe('SuppliesController', function () {
     expect(ctrl.list).toEqual([{item: 'sth', amount: 1}]);
   });
 
+  it('adds item to supplies', function () {
+    spyOn(suppliesService, 'store');
+    var ctrl = init();
+
+    ctrl.new = {item: 'scissors', amount: 2};
+    ctrl.add();
+
+    expect(suppliesService.store).toHaveBeenCalledWith('scissors', 2);
+  });
+
+  it('clears input after adding', function () {
+    spyOn(suppliesService, 'store');
+    var ctrl = init();
+
+    ctrl.new = {item: 'scissors', amount: 2};
+    ctrl.add();
+
+    expect(ctrl.new).toBeUndefined();
+  });
+
 });
