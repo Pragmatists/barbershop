@@ -1,1 +1,1 @@
-angular.module('barbershop.supplies', []);
+angular.module('barbershop.supplies', ['ui.router']);
