@@ -7,4 +7,4 @@ angular.module('barbershop.supplies')
       controllerAs: 'supplies',
       controller: 'SuppliesController'
     });
-  });
+    });

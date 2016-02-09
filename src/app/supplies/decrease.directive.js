@@ -1,24 +1,24 @@
 angular
-  .module('barbershop.supplies')
-  .directive('basDecrease', function basDecrease() {
-    return {
-      restrict: 'E',
-      template: '<span class="bas-decrease__button" ng-click="decrease.perform()"></span>',
-      scope: {},
-      bindToController: {
-        item: '='
-      },
-      controllerAs: 'decrease',
-      controller: function (suppliesService) {
+    .module('barbershop.supplies')
+    .directive('basDecrease', function basDecrease() {
+        return {
+            restrict: 'E',
+            template: '<span class="bas-decrease__button" ng-click="decrease.perform()"></span>',
+            scope: {},
+            bindToController: {
+                item: '='
+            },
+            controllerAs: 'decrease',
+            controller: function (suppliesService) {
 
-        var vm = this;
+                var vm = this;
 
-        vm.perform = function () {
-          if (vm.item.amount) {
-            suppliesService.take(vm.item.item, 1);
-          }
-        }
+                vm.perform = function () {
+                    if (vm.item.amount) {
+                        suppliesService.take(vm.item.item, 1);
+                    }
+                }
 
-      }
-    };
-  });
+            }
+        };
+    });

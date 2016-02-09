@@ -1,14 +1,14 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular
-    .module('barbershop', [
-      'ngMessages',
-      'ui.router',
-      'ui.bootstrap',
-      'toastr',
+    angular
+        .module('barbershop', [
+            'ngMessages',
+            'ui.router',
+            'ui.bootstrap',
+            'toastr',
 
-      'barbershop.supplies'
-    ]);
+            'barbershop.supplies'
+        ]);
 
 })();
