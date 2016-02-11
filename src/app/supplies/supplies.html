@@ -1,28 +1,25 @@
 <h1>supplies</h1>
 
 <ul class="supplies-list">
-  <li class="supplies-list-item" ng-repeat="item in supplies.list">
-    <div class="supplies-list-item__name">{{ item.item }}</div>
-    <div class="supplies-list-item__amount">{{ item.amount }}</div>
-    <bas-decrease item="item" class="supplies-list-item__decrease"></bas-decrease>
+  <li class="supplies-list-item">
+    <div class="supplies-list-item__name">szampon</div>
+    <div class="supplies-list-item__amount">3</div>
+  </li>
+  <li class="supplies-list-item">
+    <div class="supplies-list-item__name">ręcznik</div>
+    <div class="supplies-list-item__amount">5</div>
   </li>
 </ul>
 
-<form class="add-supplies-form" name="addItemForm" ng-submit="supplies.add()">
+<form class="add-supplies-form">
   <div class="add-supplies-form__name">
     <input type="text"
-           placeholder="the item you have bought"
-           class=""
-           required=""
-           ng-model="supplies.new.item">
+           placeholder="the item you have bought">
   </div>
   <div class="add-supplies-form__amount">
     <input type="number"
-           min="0"
            placeholder="its amount"
-           class="add-supplies-form__amount"
-           required=""
-           ng-model="supplies.new.amount">
+           class="add-supplies-form__amount">
   </div>
   <div class="add-supplies-form__submit">
     <button type="submit"> Add</button>

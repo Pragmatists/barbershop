@@ -2,15 +2,18 @@
   "appointments": [
     {
       "client": "John",
-      "date": "2016-02-11"
+      "date": "2016-02-11",
+      "time": "16:00"
     },
     {
       "client": "Jane",
-      "date": "2016-02-11"
+      "date": "2016-02-11",
+      "time": "17:00"
     },
     {
       "client": "Joan",
-      "date": "2016-02-12"
+      "date": "2016-02-12",
+      "time": "16:00"
     }
   ],
   "tasks": []

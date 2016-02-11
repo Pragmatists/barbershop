@@ -4,13 +4,6 @@ angular.module('barbershop.appointments')
         $stateProvider.state('appointments', {
             url: '/appointments',
             parent: 'app',
-            templateUrl: 'app/appointments/appointments.html',
-            controller: 'AppointmentsController',
-            controllerAs: 'appointments',
-            resolve: {
-                appointments: function (appointmentsService) {
-                    return appointmentsService.listForToday();
-                }
-            }
+            templateUrl: 'app/appointments/appointments.html'
         });
     });
