@@ -2,8 +2,8 @@
 
 <h3>Today</h3>
 
-<ul class="list-group">
-  <li ng-repeat="appointment in appointments.list" class="list-group-item">
-    {{ appointment.client }}
-  </li>
-</ul>
+<div class="appointments">
+  <div ng-repeat="appointment in appointments.list" class="appointment">
+    <div class="appointment__client">{{ appointment.client }}</div>
+  </div>
+</div>
