@@ -1,4 +1,17 @@
 {
-  "appointments": [],
+  "appointments": [
+    {
+      "client": "John",
+      "date": "2016-02-11"
+    },
+    {
+      "client": "Jane",
+      "date": "2016-02-11"
+    },
+    {
+      "client": "Joan",
+      "date": "2016-02-12"
+    }
+  ],
   "tasks": []
 }

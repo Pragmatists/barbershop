@@ -8,7 +8,8 @@
             'ui.bootstrap',
             'toastr',
 
-            'barbershop.supplies'
+            'barbershop.supplies',
+            'barbershop.appointments'
         ]);
 
 })();
