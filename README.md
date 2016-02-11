@@ -9,9 +9,13 @@ Aplikacja wspierająca zakład fryzjerski.
 - umawianie wizyty
 - wizualne oznaczenie aktualnej wizyty
 - oznaczanie wizyty jako zakończona
-- oznaczanie wizyty jako nieodbyta
+- odwołanie wizyty
 - przypisywanie fryzjera do wizyty
 - filtrowanie wizyt po fryzjerze
+- edycja wizyty
+- walidacja wizyty (wybrany fryzjer, podane imie i numer telefonu, poprawna godzina i data)
+- wyślij wiadomość do klienta
+- ocenianie wizyt
 - magazyn zasobów
 - dodawanie zasobów do magazynu
 - zużywanie zasobów
