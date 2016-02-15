@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {
+    "postinstall": "bower install",
     "test": "gulp test",
     "backend": "json-server backend/db.json -p 5000",
     "frontend": "gulp serve"
   },
   "devDependencies": {
+    "bower": "^1.7.7",
     "browser-sync": "~2.9.11",
     "browser-sync-spa": "~1.0.3",
     "chalk": "~1.1.1",
