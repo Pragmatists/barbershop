@@ -1,5 +1,5 @@
 angular.module('barbershop.appointments')
-    .service('appointmentsService', function ($q) {
+    .service('appointmentsService', function ($http) {
         var appointments = [];
 
         return {
@@ -7,7 +7,10 @@ angular.module('barbershop.appointments')
                 appointments.push(appointment)
             },
             getAppointments: function () {
-                return $q.when(appointments);
+                return $http.get('/api/appointments')
+                    .then(function (response) {
+                        return response.data;
+                    });
             }
         }
     });

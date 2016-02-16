@@ -1,25 +1,22 @@
 describe('appointmentsService', function () {
-    var appointmentsService, rootScope;
+    var appointmentsService;
+    var http;
 
     beforeEach(module('barbershop.appointments'));
 
-    beforeEach(inject(function (_appointmentsService_, $rootScope) {
+    beforeEach(inject(function (_appointmentsService_, $httpBackend) {
+        http = $httpBackend;
         appointmentsService = _appointmentsService_;
-        rootScope = $rootScope;
     }));
-
-    function addAppointment(appointment) {
-        appointmentsService.add(appointment);
-    }
 
     it('gets appointments', function () {
         var verify = jasmine.createSpy('verifier');
-        addAppointment({client: "Michał", date: "2016-02-17"});
+        http.expectGET('/api/appointments')
+            .respond(200, ['appointment1', 'appointment2']);
 
         appointmentsService.getAppointments().then(verify);
-        rootScope.$apply();
+        http.flush();
 
-        expect(verify)
-            .toHaveBeenCalledWith([{client: "Michał", date: "2016-02-17"}])
+        expect(verify).toHaveBeenCalledWith(['appointment1', 'appointment2'])
     });
 });
