@@ -3,17 +3,27 @@
     {
       "client": "John",
       "date": "2016-02-11",
-      "time": "16:00"
+      "time": "16:00",
+      "phone": "+48123456789"
     },
     {
       "client": "Jane",
       "date": "2016-02-11",
-      "time": "17:00"
+      "time": "17:00",
+      "phone": "+48987654321"
     },
     {
       "client": "Joan",
       "date": "2016-02-12",
       "time": "16:00"
+    },
+    {
+      "client": "awwe",
+      "id": "f92e500d-51b9-468f-96c7-4053dcb10162"
+    },
+    {
+      "client": "asdd",
+      "id": "a89fe108-7b19-4c2a-a5e9-67bff1f30cee"
     }
   ],
   "tasks": []
