@@ -4,6 +4,8 @@ angular.module('barbershop.appointments')
         $stateProvider.state('appointments', {
             url: '/appointments',
             parent: 'app',
-            templateUrl: 'app/appointments/appointments.html'
+            templateUrl: 'app/appointments/appointments.html',
+            controllerAs: 'appointments',
+            controller: 'AppointmentsController'
         });
     });
