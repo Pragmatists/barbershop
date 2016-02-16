@@ -3,6 +3,6 @@ angular.module('barbershop.supplies')
         $stateProvider.state('supplies', {
             parent: 'app',
             url: '/supplies',
-            templateUrl: 'app/supplies/supplies.html',
+            templateUrl: 'app/supplies/supplies.html'
         });
     });
