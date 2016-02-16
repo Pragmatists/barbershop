@@ -32,6 +32,19 @@ describe('appointmentsService', function () {
     expect(verify).toHaveBeenCalledWith([appointment1, appointment2]);
   });
 
+  it('creates new appointment', function () {
+    var verify = jasmine.createSpy('verifier');
+
+    http
+      .expectPOST('/api/appointments', appointment1)
+      .respond(200);
+
+    appointmentsService.createAppointment(appointment1).then(verify);
+    http.flush();
+
+    expect(verify).toHaveBeenCalled();
+  });
+
   function injectDependencies() {
     inject(function (_appointmentsService_, _$rootScope_, $httpBackend) {
       appointmentsService = _appointmentsService_;

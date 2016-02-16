@@ -1,18 +1,28 @@
 angular
   .module('barbershop.appointments')
-  .controller('appointmentsController', function (appointmentsService) {
+  .controller('appointmentsController', function (appointments, appointmentsService) {
     var vm = this;
-    this.list = [{
-      client: 'Paweł',
-      date: '2016-02-14'
-    }];
+    vm.list = [];
+    vm.create = create;
 
-    appointmentsService
-      .fetchAppointments()
-      .then(function (appointments) {
-        vm.list = appointments;
-      })
-      .catch(function (error) {
-        vm.error = error;
-      })
+    fetch();
+
+    function fetch() {
+      appointmentsService
+        .fetchAppointments()
+        .then(function (appointments) {
+          vm.list = appointments;
+        });
+    }
+
+    function create() {
+      var appointment = {
+        client: vm.newAppointmentClient
+      };
+      appointmentsService
+        .createAppointment(appointment)
+        .then(function () {
+          fetch();
+        });
+    }
   });

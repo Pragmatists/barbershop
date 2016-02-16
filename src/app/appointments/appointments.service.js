@@ -1,7 +1,6 @@
 angular
   .module('barbershop.appointments')
   .service('appointmentsService', function ($http) {
-
     return {
       fetchAppointments: function () {
         return $http
@@ -9,6 +8,10 @@ angular
           .then(function (response) {
             return response.data;
           });
+      },
+      createAppointment: function (appointment) {
+        return $http
+          .post('/api/appointments', appointment);
       }
     }
   });
