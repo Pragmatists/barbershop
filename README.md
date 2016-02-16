@@ -5,15 +5,16 @@ Aplikacja wspierająca zakład fryzjerski.
 
 #### Funkcjonalności
 
-- lista umówionych wizyt
-- umawianie wizyty
+- lista umówionych wizyt - service trzymajacy dane w pamięci, zwracający promise'y 
+- umawianie wizyty - odświerz listę po dodaniu
+- walidacja wizyty (podane imie i numer telefonu, poprawna godzina i data)
+- edycja wizyty - przejście na $http
+- numer telefonu do klienta - filtr do wyświetlania
 - wizualne oznaczenie aktualnej wizyty
 - oznaczanie wizyty jako zakończona
 - odwołanie wizyty
 - przypisywanie fryzjera do wizyty
 - filtrowanie wizyt po fryzjerze
-- edycja wizyty
-- walidacja wizyty (wybrany fryzjer, podane imie i numer telefonu, poprawna godzina i data)
 - wyślij wiadomość do klienta
 - ocenianie wizyt
 - magazyn zasobów
