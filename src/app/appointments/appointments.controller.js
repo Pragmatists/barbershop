@@ -1,13 +1,6 @@
 angular.module('barbershop.appointments')
-    .controller('AppointmentsController', function(appointmentsService) {
+    .controller('AppointmentsController', function(appointmentsList) {
         var vm = this;
-
-        appointmentsService.getAppointments()
-            .then(function (appointments) {
-                vm.list = appointments;
-            })
-            .catch(function (error) {
-                vm.error = error;
-            });
+        vm.list = appointmentsList;
 
     });

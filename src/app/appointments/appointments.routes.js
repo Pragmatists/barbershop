@@ -6,6 +6,11 @@ angular.module('barbershop.appointments')
             parent: 'app',
             templateUrl: 'app/appointments/appointments.html',
             controllerAs: 'appointments',
-            controller: 'AppointmentsController'
+            controller: 'AppointmentsController',
+            resolve: {
+                appointmentsList: function (appointmentsService) {
+                    return appointmentsService.getAppointments();
+                }
+            }
         });
     });
