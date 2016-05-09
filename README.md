@@ -16,11 +16,10 @@ Application supporting barber shop.
 - appointment filter for barber
 - send a message to the customer
 - appointment evaluation
-- resource storage
-- add resource to strorage
-- use of resources
-- show missing resources
-- show missing goods
+- supplies storage
+- add supplies to strorage
+- use of supplies
+- show missing supplies
 
 
 ##### How to run
