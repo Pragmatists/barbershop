@@ -1,29 +1,29 @@
 ## Barbershop
 
-Aplikacja wspierająca zakład fryzjerski.
+Application supporting barber shop. 
+
+#### Features
+
+- list of appointments - service keeping data in memory, returning promises
+- making an appointments - refresh list after create 
+- appointment validation (name and phone number, valid hour and date)
+- appointment edit - move to $http
+- customer phone number - view filter
+- current appointment visual indication
+- mark vist and completed
+- appointment canellation
+- barber to appointment assignment
+- appointment filter for barber
+- send a message to the customer
+- appointment evaluation
+- resource storage
+- add resource to strorage
+- use of resources
+- show missing resources
+- show missing goods
 
 
-#### Funkcjonalności
-
-- lista umówionych wizyt - service trzymajacy dane w pamięci, zwracający promise'y 
-- umawianie wizyty - odświerz listę po dodaniu
-- walidacja wizyty (podane imie i numer telefonu, poprawna godzina i data)
-- edycja wizyty - przejście na $http
-- numer telefonu do klienta - filtr do wyświetlania
-- wizualne oznaczenie aktualnej wizyty
-- oznaczanie wizyty jako zakończona
-- odwołanie wizyty
-- przypisywanie fryzjera do wizyty
-- filtrowanie wizyt po fryzjerze
-- wyślij wiadomość do klienta
-- ocenianie wizyt
-- magazyn zasobów
-- dodawanie zasobów do magazynu
-- zużywanie zasobów
-- pokazywanie brakujących towarów
-
-
-##### Uruchamianie
+##### How to run
 
 - backend 
     
