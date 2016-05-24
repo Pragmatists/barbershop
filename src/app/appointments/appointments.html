@@ -3,16 +3,25 @@
 <div class="appointments">
   <div class="appointment" ng-repeat="appointment in appointments.list">
     <div class="appointment__client">{{appointment.client}}</div>
+    <div class="appointment__phone">{{appointment.phone | phoneNumber}}</div>
   </div>
 </div>
 
 <form name="newAppointmentForm">
 
   <div class="form-group">
-    <label for="client"></label>
+    <label for="client">Name</label>
     <input id="client" type="text"
            class="form-control"
            ng-model="appointments.newAppointment.client"
+           required=""
+    >
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input id="phone" type="text"
+           class="form-control"
+           ng-model="appointments.newAppointment.phone"
            required=""
     >
   </div>

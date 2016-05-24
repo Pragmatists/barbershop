@@ -1,44 +1,19 @@
 {
   "appointments": [
     {
-      "id": 1,
-      "client": "Stefan"
+      "client": "xcvbxcvb",
+      "phone": 124352345,
+      "id": 669.7212722093071
     },
     {
-      "id": 2,
-      "client": "Heniek"
+      "client": "asdfasdgfasdfg",
+      "phone": 7853413245,
+      "id": 1057.582811965183
     },
     {
-      "client": "zcxvxzvc",
-      "id": 209.45443408695752
-    },
-    {
-      "client": "ania",
-      "id": 2949.585198966294
-    },
-    {
-      "client": "xbcvbcvb",
-      "id": 5206.9741706201485
-    },
-    {
-      "client": "cvbxcxcxvcxc",
-      "id": 5137.040145614434
-    },
-    {
-      "client": "cvbxcxcxvcxc",
-      "id": 4465.33615769029
-    },
-    {
-      "client": "cvbxcxcxvcxc",
-      "id": 4602.752632550404
-    },
-    {
-      "client": "cvbxcxcxvcxc",
-      "id": 4358.1713517971975
-    },
-    {
-      "client": "swsss",
-      "id": 4191.81007938904
+      "client": "fgss",
+      "phone": 367456,
+      "id": 4505.162952736237
     }
   ],
   "tasks": []
