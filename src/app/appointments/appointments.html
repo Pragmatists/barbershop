@@ -13,11 +13,13 @@
     <input id="client" type="text"
            class="form-control"
            ng-model="appointments.newAppointment.client"
+           required=""
     >
   </div>
 
   <button class="btn btn-primary"
-          ng-click="appointments.add()">
+          ng-click="appointments.add()"
+          ng-disabled="newAppointmentForm.$invalid">
     Save
   </button>
 </form>

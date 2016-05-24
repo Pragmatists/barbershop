@@ -1,10 +1,10 @@
 describe('appointmentsService', function () {
-    var service, httpBackend, generateId;
+    var appointmentsService, httpBackend, generateId;
 
     beforeEach(module('barbershop.appointments'));
 
-    beforeEach(inject(function (appointmentsService, $httpBackend, _generateId_) {
-        service = appointmentsService;
+    beforeEach(inject(function (_appointmentsService_, $httpBackend, _generateId_) {
+        appointmentsService = _appointmentsService_;
         httpBackend = $httpBackend;
         generateId = _generateId_
     }));
@@ -14,18 +14,20 @@ describe('appointmentsService', function () {
         httpBackend.expectGET('/api/appointments')
             .respond(200, ['Henryk', 'Stefan']);
 
-        service.getAppointments().then(verify);
+        appointmentsService.getAppointments().then(verify);
         httpBackend.flush();
 
         expect(verify).toHaveBeenCalledWith(['Henryk', 'Stefan']);
     });
 
     it('adds and appointment', function () {
+        var verify = jasmine.createSpy('verify');
         spyOn(generateId, 'generate').and.returnValue('123');
         httpBackend.expectPOST('/api/appointments', {client : 'Stefan', id : '123'})
             .respond(200);
 
-        service.addAppointment({client : 'Stefan'});
+        appointmentsService.addAppointment({client : 'Stefan'})
+            .then(verify);
 
         httpBackend.flush();
     });

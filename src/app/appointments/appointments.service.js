@@ -9,7 +9,7 @@ angular.module('barbershop.appointments')
             },
             addAppointment : function (newAppointment) {
                 newAppointment.id = generateId.generate();
-                $http.post('/api/appointments', newAppointment);
+                return $http.post('/api/appointments', newAppointment);
             }
         }
     });

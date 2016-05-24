@@ -36,7 +36,7 @@ describe('AppointmentsController', function () {
     });
 
     it('adds an appointment', function () {
-        spyOn(service, 'addAppointment');
+        spyOn(service, 'addAppointment').and.returnValue(q.when(true));
         var ctrl = controller('AppointmentsController');
         ctrl.newAppointment = {client : 'Józek'};
 
@@ -44,6 +44,33 @@ describe('AppointmentsController', function () {
 
         expect(service.addAppointment)
             .toHaveBeenCalledWith({client : 'Józek'});
+    });
+
+    it('refreshes the list after adding', function () {
+        var ctrl = controller('AppointmentsController');
+        spyOn(service, 'addAppointment').and.returnValue(q.when(true));
+        service.getAppointments.calls.reset();
+        service.getAppointments.and.returnValue(q.when(['refreshed']));
+
+        ctrl.add();
+
+        expect(service.addAppointment).toHaveBeenCalled();
+
+        rootScope.$digest();
+        expect(service.getAppointments).toHaveBeenCalled();
+        expect(ctrl.list).toEqual(['refreshed']);
+    });
+
+    it('clears newAppointment after creation', function () {
+        var ctrl = controller('AppointmentsController');
+        spyOn(service, 'addAppointment').and.returnValue(q.when(true));
+
+        ctrl.newAppointment = {client : 'Heniek'};
+        ctrl.add();
+        rootScope.$digest();
+
+        expect(ctrl.newAppointment).toBeUndefined();
+
     });
 
 });
