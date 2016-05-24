@@ -6,4 +6,8 @@ angular.module('barbershop.appointments')
             .then(function (data) {
                 vm.list = data;
             });
+
+        vm.add = function () {
+            appointmentsService.addAppointment(vm.newAppointment);
+        };
     });

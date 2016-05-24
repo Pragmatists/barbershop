@@ -1,19 +1,16 @@
 {
   "appointments": [
     {
-      "client": "John",
-      "date": "2016-02-11",
-      "time": "16:00"
+      "id": 1,
+      "client": "Stefan"
     },
     {
-      "client": "Jane",
-      "date": "2016-02-11",
-      "time": "17:00"
+      "id": 2,
+      "client": "Heniek"
     },
     {
-      "client": "Joan",
-      "date": "2016-02-12",
-      "time": "16:00"
+      "client": "zcxvxzvc",
+      "id": 209.45443408695752
     }
   ],
   "tasks": []

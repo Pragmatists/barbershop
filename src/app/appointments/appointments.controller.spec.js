@@ -18,7 +18,10 @@ describe('AppointmentsController', function () {
     });
 
     it('fetches data', function () {
-        var fetchedAppointments = q.when(['Stefan', 'Henryk']);
+        var fetchedAppointments = q.when([
+            {client : 'Stefan'},
+            {client : 'Henryk'}
+        ]);
 
         service.getAppointments
             .and.returnValue(fetchedAppointments);
@@ -26,7 +29,21 @@ describe('AppointmentsController', function () {
         var ctrl = controller('AppointmentsController');
         rootScope.$digest();
 
-        expect(ctrl.list).toEqual(['Stefan', 'Henryk']);
+        expect(ctrl.list).toEqual([
+            {client : 'Stefan'},
+            {client : 'Henryk'}
+        ]);
+    });
+
+    it('adds an appointment', function () {
+        spyOn(service, 'addAppointment');
+        var ctrl = controller('AppointmentsController');
+        ctrl.newAppointment = {client : 'Józek'};
+
+        ctrl.add();
+
+        expect(service.addAppointment)
+            .toHaveBeenCalledWith({client : 'Józek'});
     });
 
 });
