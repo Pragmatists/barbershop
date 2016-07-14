@@ -1,2 +1,14 @@
-<input type="text" class="add-appointment__client" ng-model="addAppointment.details.client">
-<button class="add-appointment__submit" ng-click="addAppointment.create()"></button>
+<form name="addAppointmentForm">
+  <input type="text" class="add-appointment__client"
+         required="required"
+         ng-model="addAppointment.details.client">
+
+  <button class="add-appointment__submit"
+          type="submit"
+          ng-disabled="addAppointmentForm.$invalid"
+          ng-click="addAppointmentForm.$valid && addAppointment.create()">
+    Add
+  </button>
+
+</form>
+

@@ -6,7 +6,7 @@ angular.module('barbershop.appointments')
                     .then(response => response.data);
             },
             create(appointment){
-                $http.post('/api/appointments', appointment)
+                return $http.post('/api/appointments', appointment)
                     .then((response) => {
                         $rootScope.$broadcast('appointmentCreated', response.data);
                     });

@@ -20,11 +20,13 @@ describe('appointmentsService', function () {
     });
 
     it('creates', function () {
+        var verify = jasmine.createSpy('verifier');
         http.expectPOST('/api/appointments', {client : 'John'}).respond(202);
 
-        service.create({client : 'John'});
+        service.create({client : 'John'}).then(verify);
 
         http.flush();
+        expect(verify).toHaveBeenCalled();
     });
 
     it('triggers event after creation', function () {

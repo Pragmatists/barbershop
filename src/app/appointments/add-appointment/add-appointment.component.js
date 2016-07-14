@@ -7,7 +7,10 @@ angular.module('barbershop.appointments')
             var vm = this;
 
             vm.create = function () {
-                appointmentsService.create(vm.details);
+                appointmentsService.create(vm.details)
+                    .then(() => {
+                        vm.details = undefined;
+                    });
             };
         }
     });
