@@ -1,6 +1,10 @@
 <div class="appointments">
   <h1 class="appointments__title">Appointments</h1>
 
+  <div class="appointments__actions">
+    <add-appointment></add-appointment>
+  </div>
+
   <div class="appointments__list">
     <appointment details="appointment" ng-repeat="appointment in appointments.list"></appointment>
   </div>

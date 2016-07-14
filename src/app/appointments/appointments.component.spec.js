@@ -18,6 +18,12 @@ describe('appointments component', function () {
         expect(component.find('.appointments__title')).toHaveText('Appointments');
     });
 
+    it('has add-appointment control', () => {
+        var component = createComponent();
+
+        expect(component.find('add-appointment')).toExist();
+    });
+
     it('has empty appointments list', function () {
         var component = createComponent();
 
