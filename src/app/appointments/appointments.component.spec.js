@@ -1,25 +1,44 @@
 describe('appointments component', function () {
 
-    var compile, scope, appointmentsService;
+    var compile, scope, appointmentsService, q;
 
     beforeEach(module('barbershop.appointments', 'barbershop.templates'));
 
     beforeEach(inject(function ($compile, $rootScope, _appointmentsService_, $q) {
         compile = $compile;
         scope = $rootScope.$new();
+        q = $q;
         appointmentsService = _appointmentsService_;
-        spyOn(appointmentsService, 'list').and.returnValue($q.resolve([]));
+        spyOn(appointmentsService, 'list').and.returnValue(q.resolve([]));
     }));
 
     it('has title', () => {
-        var component = compile('<appointments></appointments>')(scope);
-        scope.$digest();
+        var component = createComponent();
 
         expect(component.find('.appointments__title')).toHaveText('Appointments');
     });
 
-    it('downloads appointments', function () {
+    it('has empty appointments list', function () {
+        var component = createComponent();
 
+        expect(component.find('appointment').length).toBe(0);
     });
+
+    it('downloads appointments', () => {
+        appointmentsService.list.and.returnValue(q.resolve([
+            {id : 1, client : 'John'},
+            {id : 2, client : 'Jane'}
+        ]));
+
+        var component = createComponent();
+
+        expect(component.find('appointment').length).toBe(2);
+    });
+
+    function createComponent() {
+        var component = compile('<appointments></appointments>')(scope);
+        scope.$digest();
+        return component;
+    }
 
 });
