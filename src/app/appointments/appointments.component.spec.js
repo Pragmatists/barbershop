@@ -35,6 +35,16 @@ describe('appointments component', function () {
         expect(component.find('appointment').length).toBe(2);
     });
 
+    it('binds appointments', function () {
+        appointmentsService.list.and.returnValue(q.resolve([
+            {id : 1, client : 'John'}
+        ]));
+
+        var component = createComponent();
+
+        expect(component.find('appointment').html()).toContain('John');
+    });
+
     function createComponent() {
         var component = compile('<appointments></appointments>')(scope);
         scope.$digest();
