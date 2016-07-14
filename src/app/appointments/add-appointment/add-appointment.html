@@ -3,6 +3,9 @@
          required="required"
          ng-model="addAppointment.details.client">
 
+  <input type="text" class="add-appointment__phone"
+         ng-model="addAppointment.details.phone">
+
   <button class="add-appointment__submit"
           type="submit"
           ng-disabled="addAppointmentForm.$invalid"
