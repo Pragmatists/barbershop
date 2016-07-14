@@ -1,16 +1,15 @@
 angular.module('barbershop.appointments')
-    .service('appointmentsService', function ($q) {
-        var list = [
-            {client : 'John'},
-            {client : 'Jimmy'},
-            {client : 'Jane'}
-        ];
+    .service('appointmentsService', function ($http, $rootScope) {
         return {
             list(){
-                return $q.resolve(list);
+                return $http.get('/api/appointments')
+                    .then(response => response.data);
             },
             create(appointment){
-                list.push(appointment);
+                $http.post('/api/appointments', appointment)
+                    .then((response) => {
+                        $rootScope.$broadcast('appointmentCreated', response.data);
+                    });
             }
         }
     });

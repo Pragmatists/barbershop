@@ -11,7 +11,7 @@ describe('add-appointment component', function () {
         spyOn(appointmentsService, 'create');
     }));
 
-    it('exists', function () {
+    it('creates appointment', function () {
         var component = createComponent();
 
         component.find('input.add-appointment__client')
