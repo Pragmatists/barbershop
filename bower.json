@@ -2,7 +2,7 @@
   "name": "barbershop",
   "version": "0.0.0",
   "dependencies": {
-    "angular-messages": "~1.4.2",
+    "angular-messages": "~1.5.8",
     "jquery": "~2.1.4",
     "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.5",
@@ -11,11 +11,11 @@
     "angular-toastr": "~1.5.0",
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
-    "angular": "~1.4.2",
+    "angular": "~1.5.8",
     "lodash": "~3.10.1"
   },
   "devDependencies": {
-    "angular-mocks": "~1.4.2",
+    "angular-mocks": "~1.5.8",
     "jasmine-jquery": "~2.1.1"
   },
   "overrides": {
@@ -32,6 +32,6 @@
   },
   "resolutions": {
     "jquery": "~2.1.4",
-    "angular": "~1.4.2"
+    "angular": "~1.5.8"
   }
 }
