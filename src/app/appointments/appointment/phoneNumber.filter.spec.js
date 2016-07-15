@@ -8,7 +8,7 @@ describe('phoneNumber filter', function () {
         phoneNumberFilter = _phoneNumberFilter_;
     }));
 
-    xit('filters', function () {
+    it('filters', function () {
         expect(phoneNumberFilter(undefined)).toBe(undefined);
         expect(phoneNumberFilter('123456789')).toBe('123 456 789');
         expect(phoneNumberFilter('1234')).toBe('1 234');
